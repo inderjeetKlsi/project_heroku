@@ -4,6 +4,7 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.7.0",
+    "cool-ascii-faces": "1.3.4",
     "cors": "^2.8.1",
     "ejs": "^1.0.0",
     "express": "^4.8.7",
@@ -24,8 +25,16 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": "",
+  "description": "\"# project_heroku\"",
   "engines": {
     "node": "5.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inderjeetKlsi/project_heroku.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inderjeetKlsi/project_heroku/issues"
+  },
+  "homepage": "https://github.com/inderjeetKlsi/project_heroku#readme"
 }

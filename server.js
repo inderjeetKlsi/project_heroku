@@ -6,7 +6,7 @@ var bodyParser 	= 	require('body-parser');
 var cors 		= 	require('cors');
 var config 		= 	require("./config");
 var app			=	express();
-
+let server 		= 	require("http").Server(app);
 var __SESSION_KEY__ = 'selfEdu@2017';
 
 
@@ -38,9 +38,11 @@ var htmldata = "";
 var Result=[];
 var customerDetailAry=[];
 
-// app.listen(3000,function(){
-// 	console.log("App Started on PORT 3000");
-// });
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number,function(){
+	console.log("App Started on PORT",port_number);
+});
+
 
 app.get('/',function(req,res){
 	res.render('user_main.html');
