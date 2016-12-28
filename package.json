@@ -25,8 +25,16 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": "",
+  "description": "\"# project_heroku\"",
   "engines": {
     "node": "5.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inderjeetKlsi/project_heroku.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inderjeetKlsi/project_heroku/issues"
+  },
+  "homepage": "https://github.com/inderjeetKlsi/project_heroku#readme"
 }
