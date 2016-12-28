@@ -38,9 +38,9 @@ var htmldata = "";
 var Result=[];
 var customerDetailAry=[];
 
-app.listen(3000,function(){
-	console.log("App Started on PORT 3000");
-});
+// app.listen(3000,function(){
+// 	console.log("App Started on PORT 3000");
+// });
 
 app.get('/',function(req,res){
 	res.render('user_main.html');
