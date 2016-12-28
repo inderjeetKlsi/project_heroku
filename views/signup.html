@@ -1,0 +1,25 @@
+<div class="content" ng-controller="signupController">
+        <div class="logo">
+            <a href=""><img src="images/login_logo.png" alt="Anova Golf" class="logo-default" width="150"/> </a>
+        </div>
+        
+        <form class="login-form" name="signupForm"  role="form" novalidate  ng-submit="signup()">
+            <h3 class="form-title font-green">Sign In</h3>
+            <div class="form-group" ng-class="{'has-error': (signupForm.szEmail.$touched && signupForm.szEmail.$invalid && signupForm.szEmail.$error.required) || signupForm.szEmail.$error.pattern || status != ''}">
+                <input type="email" name="szEmail" class="form-control input-square-right" placeholder="Email-Id" data-ng-model="user.szEmail" ng-pattern="isValidEmail" required>
+                <span class="help-block" ng-show="signupForm.szEmail.$error.pattern">Please enter a valid email.</span> 
+                <span class="help-block" ng-if="signupForm.szEmail.$touched && signupForm.szEmail.$invalid && signupForm.szEmail.$error.required" ng-messages="signupForm.szEmail.$error">Email address is required field.</span> 
+                <span class="help-block">{{status}}</span>
+            </div>
+            <div class="form-group" ng-class="{'has-error': signupForm.szPassword.$touched && signupForm.szPassword.$error.required}"> 
+                <input type="password" name="szPassword" class="form-control input-square-right" placeholder="Password" required data-ng-model="user.szPassword" >
+                <span class="help-block" ng-if="signupForm.szPassword.$touched && signupForm.szPassword.$error.required" ng-messages="signupForm.szPassword.$error">Password is required field.</span>
+            </div>
+            <br/>
+            <div class="form-actions anova-center-align">
+                <button class="btn green btn-form-submit" ng-disabled="!signupForm.$valid"> Sign in</button><br/>
+                <br/>
+                <a class="anova-links" href="#login">Already have account? Go to login</a>
+            </div>
+        </form>
+</div>

@@ -1,0 +1,21 @@
+Step 1 => Make Project Folder and create other folders.
+Step 2 => Copy package.json file and server.js, grunt files on root.
+Step 3 => Intsall packages by hitting following commands.
+
+        Step 3a : npm install grunt-cli -g  	        (grlobally)
+        Step 3b : npm install grunt-nodemon --save-dev 	(locally)
+                    run grunt if  error then Run Step 3c :		
+        Step 3c : npm install grunt --save-dev
+        Step 3d : npm install pg
+        Step 3e : npm install cors
+        Step 3f : npm install body-parser
+        Step 3g : npm install express
+        Step 3h : npm install express --save-dev 
+        Step 3i : npm install jade (optionals)
+Step 4 => Update package.json file project name.
+
+
+
+
+
+

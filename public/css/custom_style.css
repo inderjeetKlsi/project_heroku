@@ -1,0 +1,686 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+body, body.page-md{font-family: 'Karla', sans-serif;color:#4e4e4e;font-size:15px;background:#dfdfdf;}
+h1, h2, h3, h4, h5, h6{color:#4e4e4e;line-height:1.125;margin:0 0 20px;}
+p{margin:0 0 20px;}
+
+a{color:#dc5b28;}
+a:hover, a:focus{color:#b73f0f;}
+
+.checkbox-container{position:relative;padding-left:20px;}
+.checkbox-container input{position:absolute;left:0;top:1px;}
+
+.align-right{text-align:right;}
+
+.btn{border-radius:2px;background:#dc5b28;font-size:18px;text-transform:capitalize;padding:6px 30px;height:40px;line-height:40px;color:#fff;}
+.btn:focus, .btn:hover{background:#b73f0f;color:#fff;}
+
+
+#popup-bg {
+    background: #000 none repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9998;
+}
+#popup-container {
+    left: 0;
+    margin-top: 0;
+    position: fixed;
+    text-align: center;
+    top: 10%;
+    width: 100%;
+    z-index: 9999;
+    padding-top:15%;
+}
+#popup-container.form_field_popup {
+    position: absolute;
+    text-align: left;
+}
+.form_field_popup .popup-option .popup_text {
+    max-height: none;
+    overflow: visible;
+}
+#popup-bg.white-bg {
+    background: #fff none repeat scroll 0 0;
+}
+.popup {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+    text-align: left;
+    width: 400px;
+}
+.popup h5 {
+    font-weight: bold;
+    text-align: left;
+}
+.popup p a {
+    background-color: #e07500;
+    border: 0 none;
+    color: #fff;
+    font: 14px/20px Arial,Helvetica,sans-serif;
+    height: 25px;
+    margin-left: 1px;
+    min-width: 105px;
+    padding-bottom: 2px;
+}
+.popup_text {
+    margin: 0 0 25px;
+    color: white;
+}
+.popup_text h1 {
+    margin: 0 0 15px;
+}
+
+.popup_text h4 {
+    color: white;
+}
+
+.pointer_link {
+    cursor: pointer;
+}
+
+.table > tbody > tr > td.active_status {
+    padding-top: 15px;
+}
+
+div.checker span {
+    margin-top: 10px;
+}
+
+table.dataTable thead .sorting_desc{min-width:75px;padding-right:17px !important;}
+.sorting_asc{min-width:75px;padding-right:17px !important;}
+.sorting{min-width:75px;padding-right:17px !important;}
+
+#page_content .search-page .search-bar input {
+    height: auto;
+}
+
+#page_content .search-page .search-bar button {
+    height: 41px;
+    min-width: 131px;
+    width: auto;
+}
+#page_content .search-page .search-bar {
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+#page_content .portlet.light {
+    padding: 2px 15px;
+}
+#user_info .portlet-title {
+    border-bottom: 0px;
+    min-height: 38px;
+}
+
+.user_status {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.success_record {
+    color: #28acb8;
+}
+
+.error_record {
+    color: #e73d4a;
+}
+
+.custom-logo {
+    margin: -15px 65px 0px;
+}
+
+#iPercentInvoiceCredit {
+    /*margin-left: 10px;*/
+}
+
+#uniform-iPercentInvoiceCredit {
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+.imported {
+    background-color: e6f0ff;
+}
+
+
+@media screen and (max-width:768px) {
+    .custom-logo {
+        margin: -15px 65px 0px;
+        display: none;
+    }
+}
+#uniform-iTrackingNo {
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.datepicker {
+    z-index: 99999;
+}
+
+.btn-anova{
+    background-color: #dc5b28;
+    border-color: #dc5b28;
+    color: #fff;
+}
+.anova_bg{background:#dc5b28}
+
+
+/*STYLE FROM FITBIT FILE*/
+
+/*****************************************************************************
+ *
+ *	Primary Layout
+ *
+ *****************************************************************************/
+ 
+.wrapper {
+	margin-bottom: -40px;
+	padding: 70px 0 80px;
+}
+
+#wrapper-messages {
+	display: none;
+}
+
+#wrapper-messages.active {
+	display: block;
+	margin-top: -60px;
+}
+
+#wrapper-messages > .notices,
+#wrapper-messages > .validation {
+	margin: 20px auto;
+	width: 560px;
+}
+
+/*****************************************************************************
+ *
+ *	Panel Layout
+ *
+ *****************************************************************************/
+
+
+.panel > .headline,
+.panel > .subheadline {
+	display: block;
+	font-weight: normal;
+	text-align: center;
+}
+
+.panel > .headline {
+	font-size: 40px;
+	line-height: 1em;
+}
+
+.panel > .subheadline {
+	color: #999;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.panel p {
+	color: inherit;
+	font-size: inherit;
+}
+
+.panel strong {
+	font-weight: bold;
+}
+
+.panel-login,
+.panel-signup {
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+/*****************************************************************************
+ *
+ *	Panel Content
+ *
+ *****************************************************************************/
+
+/*** Sign Up panel ***/
+
+.panel-signup .headline .subheadline {
+    color: #999;
+    font-size: 22px;
+    margin-top: 26px;
+}
+
+.panel-signup .auth-choices {
+    margin-top: 23px;
+}
+
+.panel-signup .common-btn-submit {
+	margin-top: 15px;
+}
+
+.panel-signup .column {
+	padding-top: 10px;
+	width: 210px;
+}
+
+.panel-signup .external-choices {
+	float: left;
+	padding-right: 29px;
+}
+
+.panel-signup .external-choices .info {
+	line-height: 1.5em;
+	padding: 0 5px 0 20px;
+}
+
+.panel-signup .fb-disabled .internal {
+	border: 0;
+	float: none;
+	padding: 10px 90px 0;
+	width: auto;
+}
+
+.panel-signup .fb-disabled .submit {
+	float: right;
+}
+
+.panel-signup .internal {
+	border-left: 1px solid #ebebeb;
+	float: right;
+	padding-left: 30px;
+}
+
+.panel-signup .legal > a {
+	white-space: nowrap;
+}
+
+.panel-signup .or {
+	left: 227px;
+	position: absolute;
+	top: 17px;
+}
+
+.data-transfer-terms.hidden {
+	display: none;
+}
+
+
+
+/*** Account locked ***/
+
+.accountLockedTitle {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	color: #102429;
+	text-align: center;
+}
+.lockedEmail {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #00b0b9;
+	line-height: 22px;
+	padding-left: 70px;
+	padding-right: 70px;
+	font-weight: bold;
+	text-align: center;
+	padding: 15px 0;
+}
+.lockedEmailText {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #102429;
+	line-height: 22px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 44px;
+}
+.lockedEmailFooter {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #102429;
+	line-height: 22px;
+	padding-left: 70px;
+	padding-right: 70px;
+	padding-bottom: 48px;
+	text-align: center;
+}
+
+
+
+/*** Link Accounts (Log In panel) ***/
+
+.greeting-linkAccount {
+	margin: 20px 0 -20px;
+}
+
+.greeting-linkAccount .message,	
+.greeting-linkAccount .photo {
+	vertical-align: middle;
+}
+
+.greeting-linkAccount .photo {
+	margin-right: 10px;
+}
+
+/*** Mobile Responsive Login ***/
+
+@media (max-width: 1023px) {
+
+	body.galileo #container {
+		width: 100%;
+		max-width: 1023px;
+	}
+
+	.panel-login .auth-btn.auth-btn-facebook,
+	.panel-login .auth-btn.auth-btn-google,
+	.panel-signup .auth-btn.auth-btn-facebook,
+	.panel-signup .auth-btn.auth-btn-google {
+		float: none;
+		margin: auto;
+		margin-bottom: 15px;
+	}
+
+	.panel-login .auth-choices,
+	.panel-signup .auth-choices {
+		min-width: 150px;
+		padding: 0px;
+	}
+
+	.panel.panel-swap {
+		max-width: 250px;
+	}
+
+	/* Extra styles to override floated sign up external choices */
+	.panel-signup .external-choices {
+		margin: 25px auto auto;
+		border-top: 1px solid #ebebeb;
+		padding-top: 25px;
+		padding-right: 0px;
+		float: none;
+	}
+
+	.panel-signup .internal {
+		border: none;
+		float: none;
+		padding: 0;
+		margin: auto;
+	}
+
+	.panel-signup .or {
+		top: auto;
+		left: auto;
+		position: absolute;
+		margin-left: 117px;
+		margin-top: 13px;
+	}
+
+	.panel.panel-profile {
+		max-width: 300px !important;
+		padding: 20px 25px !important;
+	}
+
+	#completeProfile .info-body .field-group {
+		float: none;
+		width: 80%;
+	}
+}.fb-user-info {
+	background: url(icon_checkmark_success.ff94eabaca3825bd82bf1594d80ae47b.png) no-repeat 82% 10%;
+	color: #999;
+	font-size: 13px;
+	line-height: 1.4em;
+	margin: 50px 0 20px;
+	padding-bottom: 10px
+}
+
+.fb-user-info .confirmation {
+	font-size: 12px;
+}
+
+.fb-user-info > .greeting {
+	color: #666;
+	font-weight: bold;
+	padding-right: 35px;
+}
+
+.fb-user-info > .photo {
+	float: left;
+	height: 35px;
+	margin-right: 15px;
+	width: 35px;
+}
+
+.panel-create-password {
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+.panel-create-password .constrain {
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.panel-create-password .email.validate.success { /* override because otherwise it looks weird in this case */
+	border-color: #efefef;
+}
+
+.create-password .submit {
+	margin-top: 25px;
+	text-align: right;
+}
+
+.create-password .legal > a {
+	white-space: nowrap;
+}.wrapper.profile {
+	background-image: url(2.89b9a7be8f3ab9665e86593236c0fea8.png);
+}
+
+.panel-profile {
+	padding: 50px 55px;
+}
+
+.panel-profile .birthday,
+.panel-profile .gender {
+	margin-bottom: 25px;
+}
+
+.panel-profile .birthday > .field {
+	margin-right: 3px;
+	width: 55px;
+}
+
+.panel-profile .birthday > .year {
+	width: 70px;
+}
+
+.locale-ko_KR .panel-profile .birthday > .year {
+	width: 90px;
+}
+
+.panel-profile .left-cell {
+	float: left;
+	margin-right: 50px;
+	padding-bottom: 30px;
+}
+
+.panel-profile .right-cell {
+	float: left;
+	padding-bottom: 30px;
+	min-width: 58%;
+}
+
+.panel-profile .explain {
+	color: #b2b2b2;
+	margin: -10px 0 25px;
+}
+
+.panel-profile .field.name {
+	margin-right: 30px;
+}
+
+.panel-profile .gender,
+#gender,
+#gender-menu {
+	width: 150px !important; /* overrides harmful inline styles set by our custom select-menu replacement widget */
+}
+
+.panel-profile .height {min-width: 150px;}
+
+.panel-profile > .headline {
+	margin-bottom: 30px;
+	text-align: left;
+}
+
+.panel-profile .height-imperial,
+.panel-profile .height-metric {
+	clear: both;
+}
+
+.panel-profile .height-imperial > .field {
+	margin-right: 5px;
+	width: 50px;
+}
+
+.locale-zh_CN .panel-profile .height-imperial > .field {width: 60px;}
+
+.locale-ko_KR .panel-profile .height-imperial > .field {width: 100px;}
+
+.panel-profile .height-metric > .field {
+	width: 75px;
+}
+
+.panel-profile .info-personal {
+	margin: 0 -55px 15px;
+	padding: 0 55px 15px;
+}
+
+.panel-profile .info-personal .field {
+	width: 220px;
+}
+
+.panel-profile dd {
+	display: inline-block;
+}
+
+.panel-profile .submit {
+	text-align: right;
+}
+
+.panel-profile .weight-group {
+	clear: both;
+}
+
+.panel-profile .weight-group .field {
+	margin-right: 5px;
+	width: 80px;
+}
+
+.common-form .field-group .ui-selectmenu.error {
+    border: 4px solid #CC3930;
+}
+
+.common-form .field-group .ui-selectmenu.error:focus {
+    border: 4px solid #4CBFBF;
+    -moz-transition: border-color 0.5s;
+	-webkit-transition: border-color 0.5s;
+  	transition: border-color 0.5s;
+}
+
+.locale-ko_KR .panel-profile .weight-group .field,
+.locale-ko_KR .panel-profile .height-imperial>.field{
+	width: 100px;
+}
+
+.panel-profile #gender-button:focus,
+.panel-profile #gender-button.ui-state-active {  border-color: #4cbfbf;}
+
+select#gender {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: #999;
+}
+
+.dropdown-wrapper {
+	height: 30px;
+	position: relative;
+}
+
+.dropdown-wrapper span {
+	pointer-events: none;
+}
+
+iframe[src^="https://apis.google.com/u/0/_/widget/oauthflow/toast"] {display: none;}
+.wrapper.profile {
+    height:0;
+    margin:0;
+}
+
+
+/**** 21 July 2016 Css starts here (First Day)**/
+img{max-width:100%;}
+.page-header.navbar{background:#858585;}
+.page-header-inner:after{content:'';display:table;clear:both;}
+.page-header-inner{max-width:1140px;padding:0 15px 0 235px;position:relative;margin:0 auto;}
+.page-header.navbar .page-logo{margin:0;height:auto;padding:0;background:#fff;width:220px;text-align:center;float:none;position:absolute;left:15px;top:0;}
+.page-header.navbar .page-logo > a{float:none;padding:4px 0;}
+.page-header.navbar .page-logo .logo-default{margin:0;}
+
+.page-header.navbar .page-top{height:auto;float:none;}
+.page-header.navbar .page-actions{margin:0;float:none;}
+.navbar-nav{width:100%;display:table;}
+.navbar-nav > li{display:table-cell;float:none;width:16%;text-align:center;}
+.navbar-nav > li.log-btn-anova{width:20%;}
+.navbar-nav > li+li{padding-left:1px;}
+.navbar-nav > li > a{box-shadow:0 0 0 0;padding:27px 10px;color:#fff;font-weight:400;font-size:18px;background:#4e4e4e;display:block;border-radius:0;}
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus{box-shadow:0 0 0 0;color:#fff;background:#dc5b28;}
+.navbar-nav > li.log-btn-anova a{background:#dc5b28;}
+
+.panel{border-radius:2px;box-shadow:0 0 0;}
+.panel-login, .panel-signup{padding:0;max-width:560px;margin:0 auto;}
+.panel-login .headline, .panel-signup .headline{padding:20px;text-align:center;background:rgba(0,0,0,0.05);}
+.panel-login .internal, .panel-signup .internal{padding:30px 30px 15px;max-width:420px;margin:0 auto;}
+.panel-login .or{font-size:30px;}
+.panel-login .form-body{padding:0;}
+
+.facebook-login a{display:block;background:#3c6fb5;position:relative;padding:10px 12px 10px 54px;color:#fff;text-decoration:none;border-radius:2px;font-size:18px;}
+.facebook-login a span{position:absolute;left:0;top:0;width:44px;height:100%;background:#3d5a98 url(../images/fb_btn_login.png) no-repeat 17px center;border-radius:2px 0 0 2px;}
+
+.input-group-addon{border:0;background:#6e6e6e;border-radius:2px 0 0 2px;color:#eee;}
+.form-control{background:#dfdfdf;color:#4e4e4e;font-size:17px;border-radius:2px;padding:6px 10px;height:40px;border:0;letter-spacing:-1px;}
+
+.site-footer{font-size:14px;padding:20px 0;color:#888;}
+.site-footer a{color:#888;}
+
+
+@media (max-width:991px) {
+	.align-right, .site-footer{text-align:center;}
+	
+	.navbar-collapse.collapse{display:none !Important;}
+	.navbar-collapse.collapse.in{display:block !Important;}
+	.page-header-inner{height:74px;}
+	.page-header.navbar .page-top{position:absolute;left:0;top:100%;z-index:9;width:100%;}
+	.navbar-nav{margin:0;}
+	.navbar-nav > li, .navbar-nav > li.log-btn-anova, .navbar-nav > li+li{display:block;width:auto;padding:0 0 1px;text-align:left;}
+	.navbar-nav > li > a{padding:10px;}
+}
+@media (min-height:700px) {
+	body{padding-bottom:60px;}
+	.site-footer{position:absolute;left:0;width:100%;bottom:0;}
+}
+
+.course-small-btn {
+    background: #dc5b28 none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 50px;
+    padding: 1px 10px;
+    text-transform: capitalize;
+}

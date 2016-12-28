@@ -1,0 +1,28 @@
+<div class="menu-toggler sidebar-toggler"></div>
+    <div class="content" ng-controller="loginController">
+        <div class="logo">
+            <a href=""><img src="images/login_logo.png" alt="Anova Golf" class="logo-default" width="150"/> </a>
+        </div>
+        <form class="login-form" name="loginForm"  role="form" novalidate  ng-submit="login()">
+                <h3 class="form-title font-green">Log In</h3>
+                <div class="form-group" ng-class="{'has-error': (loginForm.szEmail.$touched && loginForm.szEmail.$invalid && loginForm.szEmail.$error.required) || loginForm.szEmail.$error.pattern}">
+                    <input type="email" name="szEmail" class="form-control input-square-right" placeholder="Email-Id" data-ng-model="user.szEmail" ng-pattern="isValidEmail" required>
+                    <span class="help-block" ng-show="loginForm.szEmail.$error.pattern">Please enter a valid email.</span> 
+                    <span class="help-block" ng-if="loginForm.szEmail.$touched && loginForm.szEmail.$invalid && loginForm.szEmail.$error.required" ng-messages="loginForm.szEmail.$error">Email address is required field.</span> 
+                </div>
+                <div class="form-group" ng-class="{'has-error': loginForm.szPassword.$touched && loginForm.szPassword.$error.required}"> 
+                    <input type="password" name="szPassword" class="form-control input-square-right" placeholder="Password" required data-ng-model="user.szPassword" >
+                    <span class="help-block" ng-if="loginForm.szPassword.$touched && loginForm.szPassword.$error.required" ng-messages="loginForm.szPassword.$error">Password is required field.</span>
+                </div>
+                <br/>
+                <div class="form-actions anova-center-align">
+                    <button class="btn green btn-form-submit" ng-disabled="!loginForm.$valid"> Log in</button><br/><br/>
+                    <input type="checkbox" value="1" name="iRemember" data-ng-model="user.iRemember">
+                    Remember Me
+                    <br/>
+                    <a class="anova-links" id="forget-password" href="#forgotPassword">Forgot your password?</a>
+                    <br/>
+                    <a class="anova-links" href="#signup">Not a Member? Create an account</a>
+                </div>
+            </form>
+    </div>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Session Management in NodeJS using Express4.2</title>
+<script src="angular.min.js"></script> 
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body ng-app="myapp" ng-controller="mycontroller">
+<div class="panel panel-primary">
+  <div class="panel-heading">User</div>
+  <div class="panel-body">Login
+
+
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-3">
+      <input type="email" class="form-control" id="email" ng-model="email" placeholder="Enter email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <div class="col-sm-3"> 
+      <input type="password" class="form-control" id="pwd" ng-model="password" placeholder="Enter password">
+    </div>
+  </div>
+ 
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-success" ng-click="submit()">Submit</button>
+    </div>
+  </div>
+</form>
+ </div>
+</div>
+</body>
+</html>
+
+<script>
+var app = angular.module('myapp',[]);
+app.controller('mycontroller', function($scope, $http, $window) {
+	$scope.submit = function(){
+		
+	 	$http({
+				method : 'post',
+				url : 'http://localhost:3000/login',
+				data : {email:$scope.email,pass:$scope.password}
+			}).success(function(Returndata) {
+			if(Returndata==='done')			
+			{
+					 $window.location.href = "/admin";
+			}
+      
+			});
+	}
+})
+
+</script>

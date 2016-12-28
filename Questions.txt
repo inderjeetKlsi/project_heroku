@@ -1,0 +1,12 @@
+Question => How to split files in folder and use them with routing?
+Question => Why get method call in routing?
+Question => How to split controller? Please give an example.
+Question => How i can define variable in different file and use them in server.js file?
+Question => What is the best why to write a sql query?
+Question => Give me some example for row count not empty?
+Question => How to encrypt decrypt password?
+Question => Now currently we are doing all code and api call in one file i.e server.js how i can split this file?
+Question => How i can define virtual host?
+Question => Currently my url is localhost:3000 how i can change this?
+Question => How to send email from angularjs?
+Question => When my project is done on local machine how i can deploye it on server?
