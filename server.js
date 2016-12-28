@@ -6,7 +6,7 @@ var bodyParser 	= 	require('body-parser');
 var cors 		= 	require('cors');
 var config 		= 	require("./config");
 var app			=	express();
-let server 		= 	require("http").Server(app);
+var server 		= 	require("http").Server(app);
 var __SESSION_KEY__ = 'selfEdu@2017';
 
 
