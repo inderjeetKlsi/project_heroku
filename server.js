@@ -20,9 +20,17 @@ app.use(express.static(__dirname + '/views'));
 app.set('views', __dirname + '/views');
 
 app.engine('html', require('ejs').renderFile);
-app.use(session({secret: __SESSION_KEY__,saveUninitialized: true,resave: true}));
+// app.use(session({secret: __SESSION_KEY__,saveUninitialized: true,resave: true}));
 var pool = new pg.Pool(config.conn);
-console.log('pg configured... ');
+
+
+pg.defaults.ssl = true;
+
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
+
+});
 
 var user_session;
 var data = "";
