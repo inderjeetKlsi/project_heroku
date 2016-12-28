@@ -11,7 +11,7 @@ var __SESSION_KEY__ = 'selfEdu@2017';
 
 
 // Please Clear Following lines of codes
-app.use(cors({origin: 'http://localhost'}));
+app.use(cors({origin: 'https://intense-bayou-87341.herokuapp.com'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
