@@ -24,7 +24,7 @@ app.engine('html', require('ejs').renderFile);
 var pool = new pg.Pool(config.conn);
 
 
-pg.defaults.ssl = true;
+pg.defaults.ssl = false;
 
 pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) throw err;
@@ -71,32 +71,33 @@ app.post('/signup',function (req, res) {
 
 		var existingEmail = [];
 		var responseAry = [];
+		var Result = [];
 			pool.connect(function(err, client, done) {
 			if(err) {
 				return console.error('error fetching client from pool', err);
 			}
 
-			var query = client.query("SELECT count(id) as emailExists FROM users.tbl_user where "+selectColumn+"='"+szEmail+"'");
-			// console.log(query);
-			query.on('row', (row) => {
-				console.log(row);
-					existingEmail.push(row);
-				});
-				console.log(existingEmail);
+			// var query = client.query("SELECT count(id) as emailExists FROM users.tbl_user where "+selectColumn+"='"+szEmail+"'");
+			// // console.log(query);
+			// query.on('row', (row) => {
+			// 	var emailExists = JSON.stringify(emailExists);
+			// 		Result.push(row);
+			// 	});
+			// 	console.log(Result);
+			// 	console.log(existingEmail);
 
-				if(existingEmail == true){
-					responseAry[0] = "ERROR";
-					responseAry[1] = 'This email address is already registered.';
-				}
-				else{
-					// var inserQuery = "INSERT INTO users.tbl_user("+columns+") values('"
-					// 		+ szEmail + "','" 
-					// 		+ szPassword +
-					// 		"')";
-					// 		console.log(inserQuery);
-					// 	client.query(inserQuery);
-					// 	responseAry[0] = "SUCCESS";
-				}
+				// if(existingEmail == true){
+				// 	responseAry[0] = "ERROR";
+				// 	responseAry[1] = 'This email address is already registered.';
+				// }
+				// else{
+					var inserQuery = "INSERT INTO users.tbl_user("+columns+") values('"
+							+ szEmail + "','" 
+							+ szPassword +
+							"')";
+						client.query(inserQuery);
+						responseAry[0] = "SUCCESS";
+				// }
 				res.send(responseAry);
 			});
 		}
