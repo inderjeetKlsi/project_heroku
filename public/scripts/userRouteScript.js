@@ -43,7 +43,7 @@ app.controller('signupController',function($scope,$rootScope,$http)
     $rootScope.signup = function () {
                 $http({
                     method: 'POST',
-                    url: "http://localhost:3000/signup",
+                    url: "https://intense-bayou-87341.herokuapp.com/signup",
                     data: JSON.stringify($scope.user),
                     headers: { 'Content-Type': 'application/JSON' }
                 }).
